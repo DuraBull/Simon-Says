@@ -1,0 +1,25 @@
+.container
+    display: grid
+    margin: auto
+    grid-template-columns: auto 1fr
+    gap: 4em
+
+.message
+    font-size: 100px
+    margin: 1em 0
+
+$size: 225px
+.box
+    width: $size
+    height: $size
+    border: 10px solid black
+    border-radius: 35px
+    &.green
+        background-color: $green
+    &.red
+        background-color: $red
+    &.yellow
+        background-color: $yellow
+    &.blue
+        background-color: $blue
+        
