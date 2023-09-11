@@ -206,7 +206,8 @@ body {
 }
 
 .message {
-  font-size: 100px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 60px;
   margin: 1em 0;
 }
 
@@ -215,6 +216,9 @@ body {
   height: 225px;
   border: 10px solid black;
   border-radius: 35px;
+}
+.box:hover {
+  cursor: pointer;
 }
 .box.green {
   background-color: #008000;
@@ -227,4 +231,8 @@ body {
 }
 .box.blue {
   background-color: #0000FF;
+}
+.box.active {
+  background-color: white;
+  border-color: white;
 }/*# sourceMappingURL=main.css.map */
