@@ -13,17 +13,37 @@ let states = ['new', 'simon', 'player', 'end'];
 let message = document.querySelector(".message");
 console.log(message.innerText);
 
-//initialize boxes as an array of simon choices
-let boxes = document.querySelectorAll(".box");
-console.log(boxes);
-
+let buttonColors = ["red", "blue", "green", "yellow"];
+let randomChosenColor = buttonColors[nextSequence()];
 var simonSequence = [];
+
+simonSequence.push(randomChosenColor);
+console.log(simonSequence);
+showSimon();
+
 var playerSequence = [];
 
-//initialize randomNumber between 0 and 3 (4 possibilities)
-let randomNumber = Math.floor(Math.random() * 4);
-
 //function to return a new random number between 0 and 3
-function newRandomNumber() {
+function nextSequence() {
     return Math.floor(Math.random() * 4);
+}
+
+function showSimon() {
+    for (let i = 0; i < simonSequence.length; i++) {
+        switch(simonSequence[i]) {
+            case "red":
+                redSound.play();
+                break;
+            case "blue":
+                blueSound.play();
+                break;
+            case "green":
+                greenSound.play();
+                break;
+            case "yellow":
+                yellowSound.play();
+                break;
+        }
+
+    }
 }
